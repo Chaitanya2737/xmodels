@@ -40,7 +40,7 @@ const XModal = () => {
 
   return (
     <div>
-      <button onClick={handleOpenModal} style={{ backgroundColor: '#4CAF50', border: 'none', color: 'white', padding: '15px 32px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer', borderRadius: '8px' }}>Open Form</button>
+      <button onClick={handleOpenModal}>Open Form</button>
       {isOpen && (
         <div style={{ display: 'block', position: 'fixed', zIndex: '1', left: '0', top: '0', width: '100%', height: '100%', overflow: 'auto', backgroundColor: 'rgba(0,0,0,0.4)' }}>
           <div style={{ backgroundColor: '#fefefe', margin: '15% auto', padding: '20px', border: '1px solid #888', width: '80%' }}>
@@ -85,7 +85,7 @@ const XModal = () => {
                 style={{ marginBottom: '10px', width: '100%', padding: '12px 20px', margin: '8px 0', display: 'inline-block', border: '1px solid #ccc', borderRadius: '4px', boxSizing: 'border-box' }}
               />
 
-              <button type="submit" style={{ backgroundColor: '#4CAF50', border: 'none', color: 'white', padding: '15px 32px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer', borderRadius: '8px' }}>Submit</button>
+              <button type="submit" className="submit-button" style={{ backgroundColor: '#4CAF50', border: 'none', color: 'white', padding: '15px 32px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer', borderRadius: '8px' }}>Submit</button>
             </form>
           </div>
           <div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: 'transparent', zIndex: '-1' }} onClick={handleCloseModal}></div>
