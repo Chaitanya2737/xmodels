@@ -7,7 +7,7 @@ const XModal = () => {
   const [dob, setDob] = useState('');
   const [phone, setPhone] = useState('');
 
-  const handleOpenModal = () => setIsOpen(true);
+//   const handleOpenModal = () => setIsOpen(true);
 
   const handleCloseModal = () => setIsOpen(false);
 
@@ -27,10 +27,10 @@ const XModal = () => {
     }
     const today = new Date();
     if (new Date(dob) > today) {
-      alert('Invalid Date of Birth. Please enter a valid date.');
+      alert('Invalid date of birth. Please enter a valid date.');
       return;
     }
-    // Submit logic here
+    // Reset form fields after submission
     setUsername('');
     setEmail('');
     setDob('');
@@ -38,9 +38,12 @@ const XModal = () => {
     setIsOpen(false);
   };
 
+  console.log(isOpen)
+
   return (
-    <div>
-      <button onClick={handleOpenModal} style={buttonStyle}>Open Form</button>
+    <div style={{textAlign:"center"}}>
+        <h1>User Details Modal</h1>
+      <button onClick={()=>setIsOpen(!isOpen)} style={buttonStyle}>Open Form</button>
       {isOpen && (
         <div style={modalStyle}>
           <div style={modalContentStyle}>
@@ -111,7 +114,7 @@ const buttonStyle = {
 };
 
 const modalStyle = {
-  display: 'block',
+  display: 'none',
   position: 'fixed',
   zIndex: '1',
   left: '0',
